@@ -268,7 +268,7 @@ am5.ready(function () {
     loadData("XBTUSD", [valueSeries, volumeSeries, sbSeries], currentGranularity);
 
     // Add comparing series
-    addComparingSeries("AAPL");
+    addComparingSeries("ETHUSD");
 
 
     // Set up main indices selector
