@@ -196,7 +196,7 @@ am5.ready(function () {
     // Function that dynamically loads data
     async function loadData(ticker, series, granularity) {
         const internalTickers = {
-            XBTUSD: { e: "BITMEX", t: "XBTUSD"  },
+            XBTUSD: { e: "BITMEX", t: "XBTUSD" },
             BTCUSD: { e: "BITFINEX", t: "BTC/USD" },
             ETHUSD: { e: "BITFINEX", t: "ETH/USD" }
         };
@@ -230,8 +230,7 @@ am5.ready(function () {
         if (internalTickers[ticker]) {
             const htmlEncode = internalTickers[ticker].t.replace('/', '%2F');
             const url = `https://timescale-production.up.railway.app/market-history/${internalTickers[ticker].e}/${htmlEncode}/1d/2013-01-01`;
-            console.log(url);
-            fetch(url, { method: 'get' }).then(async (result) => {
+            fetch(url, { "method": 'get' }).then(async (result) => {
                 const fetch = await result.json();
                 let data = [];
 
